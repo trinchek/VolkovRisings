@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolkovRisings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #404040 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e0e0e0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Фоновое изображение - положите файл с названием wolf.jpg в ту же папку что и HTML */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('wolf.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            pointer-events: none;
+        }
+
+        /* Затемнение фона */
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            pointer-events: none;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #c0c0c0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            letter-spacing: 2px;
+        }
+
+        .description {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            color: #b0b0b0;
+            text-align: justify;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        .subscribe-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #505050 0%, #6a6a6a 100%);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            letter-spacing: 1px;
+        }
+
+        .subscribe-btn:hover {
+            background: linear-gradient(135deg, #6a6a6a 0%, #808080 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .subscribe-btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                max-width: 90%;
+                padding: 35px 25px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .description {
+                font-size: 1.05em;
+            }
+
+            .subscribe-btn {
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+                max-width: 95%;
+            }
+
+            h1 {
+                font-size: 2em;
+                margin-bottom: 25px;
+            }
+
+            .description {
+                font-size: 1em;
+                margin-bottom: 40px;
+                line-height: 1.6;
+            }
+
+            .subscribe-btn {
+                padding: 14px 35px;
+                font-size: 0.95em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+            }
+
+            .description {
+                font-size: 0.95em;
+                margin-bottom: 35px;
+                line-height: 1.5;
+            }
+
+            .subscribe-btn {
+
+            .subscribe-btn {
+                padding: 12px 28px;
+                font-size: 0.85em;
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 1.4em;
+            }
+
+            .description {
+                font-size: 0.9em;
+            }
+
+            .subscribe-btn {
+                font-size: 0.8em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VolkovRisings</h1>
+        <div class="description">
+            Группировка «Волковы» по годам 19 возобновляет свою активность на платформе Телеграма.
+            Настойчивые работы вплодь до масштабных планах. Мы здесь что бы выполнять отчистку начиная с интернета заканчивая реальной жизнью.
+            Мы всегда идем вперед без заголовок, обратного пути быть не может.
+        </div>
+        <a href="https://t.me/+1AY9EDQaFCM1MDRk" class="subscribe-btn" target="_blank">
+            VolkovRisings - ПОДПИСАТЬСЯ
+        </a>
+    </div>
+</body>
+</html>
